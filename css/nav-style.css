@@ -1,0 +1,227 @@
+/* This stylesheet is used to animate and style the navbar and preloader only */
+
+/* Applies these properties to every element of the page */
+* {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+}
+
+body {
+      overflow-x: hidden;
+}
+
+/* For the preloader */
+/* Use brand colors for preloader for every circle using border-top-color */
+.circle1 {
+      position: absolute;
+      width: 10vh;
+      height: 10vh;
+      z-index: 1;
+      left: 50%;
+      top: 50vh;
+      margin-left: -5vh;
+      border: 3px solid transparent;
+      border-top: 3px solid;
+      border-top-color: #d3d3d3;
+      border-radius: 50%;
+      animation: spin1 0.8s ease-in-out infinite;
+      -webkit-animation: spin1 0.8s ease-in-out infinite;
+}
+
+.circle2 {
+      position: absolute;
+      width: 12vh;
+      height: 12vh;
+      z-index: 1;
+      left: 50%;
+      top: 49vh;
+      margin-left: -6vh;
+      border: 3px solid transparent;
+      border-top: 3px solid;
+      border-top-color: #c0c0c0;
+      border-radius: 50%;
+      animation: spin2 1.6s ease-in-out infinite;
+      -webkit-animation: spin2 1.6s ease-in-out infinite;
+}
+
+.circle3 {
+      position: absolute;
+      width: 14vh;
+      height: 14vh;
+      z-index: 1;
+      left: 50%;
+      top: 48vh;
+      margin-left: -7vh;
+      border: 3px solid transparent;
+      border-top: 3px solid;
+      border-top-color: #a9a9a9;
+      border-radius: 50%;
+      animation: spin1 0.8s ease-in-out infinite;
+      -webkit-animation: spin1 0.8s ease-in-out infinite;
+}
+
+/* Animations for the pre loader circles */
+@keyframes spin1 {
+      from {
+            transform: rotate(0deg);
+      }
+
+      to {
+            transform: rotate(360deg);
+      }
+}
+
+@keyframes spin2 {
+      0% {
+            transform: rotate(0deg);
+      }
+
+      50% {
+            transform: rotate(180deg);
+      }
+
+      100% {
+            transform: rotate(-360deg);
+      }
+}
+
+/* Pre loader animations and styling ends */
+
+/* Navbar styling and animations */
+
+nav {
+      min-height: 8vh;
+      width: 100vw;
+      position: fixed;
+      z-index: 999;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: transparent;
+      font-family: 'Lato';
+}
+
+.branding {
+      font-family: 'Montserrat';
+      font-size: 18px;
+      color: beige;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-weight: 800;
+}
+
+.nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      width: 40%;
+}
+
+.nav-links li a {
+      text-decoration: none;
+      font-size: 16px;
+      color: beige;
+      letter-spacing: 3px;
+}
+
+.burger-icon {
+      display: none;
+      cursor: pointer;
+}
+
+.nav-links li :hover {
+      color: #9c9999;
+      transition: all 0.3s ease-in;
+}
+
+/* Media queries for styling for mobile screen */
+@media screen and (max-width : 700px) {
+
+      nav {
+            background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      .branding {
+            font-size: 15px;
+      }
+
+      .nav-links {
+            position: absolute;
+            right: 0;
+            top: 8vh;
+            height: 92vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateX(100%);
+      }
+
+      .nav-links li {
+            opacity: 0;
+      }
+
+      .burger-icon {
+            display: block;
+      }
+
+      .burger-icon .line1 {
+            width: 25px;
+            height: 3px;
+            background-color: beige;
+            margin-top: 5px;
+            transition: all .4s ease-in-out;
+      }
+
+      .burger-icon .line2 {
+            width: 25px;
+            height: 3px;
+            background-color: beige;
+            margin-top: 5px;
+            transition: all .4s ease-in-out;
+      }
+
+      .burger-icon .line3 {
+            width: 25px;
+            height: 3px;
+            background-color: beige;
+            margin-top: 5px;
+            transition: all .4s ease-in-out;
+      }
+}
+
+.nav-active {
+      transform: translateX(0%);
+}
+
+@keyframes sideFade {
+      from {
+            opacity: 0;
+            transform: translateX(50px);
+      }
+
+      to {
+            opacity: 1;
+            transform: translateX(0px);
+      }
+}
+
+/* Classes to animate the burger icon */
+
+.toggle-icon .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle-icon .line2 {
+      opacity: 0;
+}
+
+.toggle-icon .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Navbar styling ends */
+
+/* Saturate, The Web Template */
+/* Elit Altum */

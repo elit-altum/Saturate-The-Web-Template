@@ -1,0 +1,88 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+#content {
+      opacity: 0;
+      animation: fadeInContent 0.5s ease forwards 0.8s;
+}
+
+@keyframes fadeInContent {
+      from {
+            opacity: 0;
+      }
+
+      to {
+            opacity: 1;
+      }
+}
+
+.first-box {
+      min-height: 100vh;
+      min-width: 100vw;
+      background-image: url(images/background.png);  
+      /* Provided by Corey Smith on pexels.com */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-clip: content-box;
+      background-attachment: fixed;
+}
+
+.first-box-content {
+      width: 100%;
+      height: 92vh;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      padding-top: 4vh;
+      color: beige;
+      font-family: 'Montserrat';
+}
+
+.brand-name {
+      font-size: 14vw;
+      text-transform: uppercase;
+      font-weight: 800;
+}
+
+.tag-line {
+      font-size: 2.4vw;
+      font-weight: 500;
+}
+
+.credits {
+      color: #e0e0e0;
+      font-size: 1.5vw;
+      font-weight: 500;
+      margin-top: 0.8vw;
+}
+
+.credits a {
+      color: #e0e0e0;
+}
+
+.second-box {
+      min-height: 90vh;
+      min-width: 100vw;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+}
+
+.second-box-content {
+      font-family: 'Montserrat';
+      font-weight: 800;
+      font-size: 4vw;
+      text-transform: uppercase;
+      color: #313131;
+}
+
+/* Saturate, The Web Template */
+/* Elit Altum */

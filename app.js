@@ -13,13 +13,21 @@ function getContent() {
       document.getElementById('content').style.display = "block";
 }
 
+var windowWidth = window.innerWidth;
+
 //Changes color of the nav upon scroll
-window.onscroll = function () {
-      if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-            document.getElementById("myNav").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
-            document.getElementById("myNav").style.transition = "all 0.3s ease-in";
-      } else {
-            document.getElementById("myNav").style.backgroundColor = "transparent";
+if(windowWidth < 700){
+      document.getElementById("myNav").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+}
+else{
+      window.onscroll = function () {
+            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+                  document.getElementById("myNav").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+                  document.getElementById("myNav").style.transition = "all 0.3s ease-in";
+            }
+            else {
+                  document.getElementById("myNav").style.backgroundColor = "transparent";
+            }
       }
 }
 
